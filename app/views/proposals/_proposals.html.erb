@@ -1,0 +1,5 @@
+<% @proposals.each do |p| %>
+  <p>
+    <b><%= p.title %></b> (<%= p.votes %> <%= link_to '+', upvote_proposal_path(p), remote: true %>) - <%= p.description %>
+</p>
+<% end %>
